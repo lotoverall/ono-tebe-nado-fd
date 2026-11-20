@@ -17,35 +17,49 @@ header {
     font-weight: 400;
     font-size: 18px;
 }
+
 .header-link-list-item {
     text-decoration: underline;
     white-space: nowrap;
 }
+
+.header-link-list-item-no-style {
+    text-decoration: none;
+    list-style: none;
+}
+
 .logo {
     display: block;
     justify-self: center;
 }
+
 .logo-image {
     display: block;
     width: 148px;
     height: 105px;
 }
+
 .address {
     display: flex;
     flex-direction: column;
     font-style: normal;
+    font-size: 18px;
+    line-height: 100%;
 }
+
 .header-address {
     justify-self: end;
     width: 240px;
-    height: 98px;
+    margin-bottom: 10px;
 }
+
 .address-link {
     font-style: normal;
-    line-height: 24px;
+    line-height: 24.3px;
     white-space: nowrap;
     text-decoration: underline;
 }
+
 .cover {
     background-image: url("../images/cover.jpg");
     background-size: cover;
@@ -53,18 +67,16 @@ header {
     background-repeat: no-repeat;
     position: relative;
     width: 1100px;
-    height: 757px;
-    box-sizing: border-box;
-    padding: 0;
-    display: grid;
-    grid-template-rows: repeat(2 , 1fr);
+    min-height: 757px;
 }
+
 .overlay {
     position: absolute;
     inset: 0;
     background-color: rgba(0,0,0, 0.6);
     z-index: 1;
 }
+
 .cover-title {
     padding: 165px 50px 207px;
     z-index: 1;
@@ -72,57 +84,72 @@ header {
     position: relative;
     text-transform: uppercase;
     font-size: 100px;
-    letter-spacing: 30%;
-    line-height: 1.15;
-    display: flex;
+    font-weight: 700;
+    letter-spacing: 30px;
+    line-height: 130%;
+    /*display: flex;
     flex-direction: column;
     gap: 20px;
-    order: 1;
+    order: 1;*/
 }
+
 .title-text{
     display: block;
 }
+
 .title-left {
     text-align: left;
 }
+
 .title-middle {
     text-align: center;
     margin-left: 30px;
 }
+
 .title-right {
     text-align: right;
     margin-right: -30px;
 }
+
 .description {
+    /*я не могу поменять position на другую, потому что в таком случае
+    у меня все ломается и весь cover съезжает*/
     position: absolute;
     bottom: 50px;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    /*display: grid;
+    grid-template-columns: 1fr auto;*/
     align-items: center;
-    justify-content: space-between;
-    gap: 95px;
+    justify-content: flex-start;
     margin: 105px 50px 0 52px;
 }
+
 .text-description {
-    margin: 0;
     font-size: 22px;
     font-weight: 400;
+    line-height: 28px;
     text-transform: uppercase;
     color: white;
     word-spacing: 20px;
+    word-spacing: 18px;
 }
+
 .description-button {
     padding: 12px 32px;
     border: 1px solid #fff;
     color: white;
     font-size: 22px;
+    font-weight: normal;
     text-transform: uppercase;
     background: transparent;
+    margin-left: 107px;
 }
+
 .lots {
     padding: 180px 25px 0 25px;
 }
+
 .lot-title {
     font-weight: 700;
     font-size: 40px;
@@ -131,14 +158,18 @@ header {
     margin-left: 40px;
     margin-bottom: 27px;
 }
+
 .lots-list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    height: auto;
     row-gap: 25px;
     position: relative;
+    list-style: none;
 }
+
 .lot-card {
     display: flex;
     flex-direction: row;
@@ -150,21 +181,27 @@ header {
     width: 334px;
     min-height: 596px;
 }
+
 .no-style {
     text-decoration: none;
 }
+
 .film {
     background-image: url("../images/card-lot-01.jpg");
 }
+
 .book {
     background-image: url("../images/card-lot-02.jpg");
 }
+
 .picture {
     background-image: url("../images/card-lot-03.jpg");
 }
+
 .lot-link {
     /*text-decoration: underline;*/
 }
+
 .lot-content {
     padding: 48px 40px;
     display: flex;
@@ -172,6 +209,7 @@ header {
     justify-content: space-between;
     height: 100%
 }
+
 .card-title {
     font-weight: 700;
     font-size: 22px;
@@ -182,6 +220,7 @@ header {
     color: white;
     z-index: 1;
 }
+
 .card-text {
     font-weight: 400;
     font-size: 20px;
@@ -189,9 +228,10 @@ header {
     color: white;
     z-index: 1;
 }
+
 .lots-more {
     display: block;
-    margin: 30px 0 0 40px;
+    margin: 35px 0 0 40px;
     font-weight: 400;
     font-size: 20px;
     line-height: 100%;
@@ -199,19 +239,24 @@ header {
     text-decoration: underline;
     white-space: nowrap;
 }
+
 .about {
     display: grid;
-    grid-template-columns: 334px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 24px;
+    /*я сверила с макетом - все точно так же*/
     padding: 120px 24px 0 24px;
 }
+
 .column-about {
-    width: 693px;
-    height: 449px;
+    justify-self: center;
+    padding-top: 35px;
 }
+
 .column-about-text {
     grid-column: 2/4;
 }
+
 .about-logo {
     display: flex;
     width: 240px;
@@ -221,28 +266,33 @@ header {
     border-radius: 50%;
     background-color: black;
 }
+
 .about-logo-image {
     width: 148px;
     height: 114px;
 }
+
 .title-about {
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
     font-size: 40px;
     font-weight: bold;
-    padding: 101px 0 103px;
+    padding: 105px 0 104px;
 }
+
 .content-about {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 25px;
 }
+
 .text-about {
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
 }
+
 .footer {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -250,6 +300,12 @@ header {
     justify-content: space-between;
     box-sizing: border-box;
 }
+
+.footer-menu {
+    margin-left: 28px;
+    margin-bottom: 10px;
+}
+
 .footer-link-list {
     text-align: center;
     list-style: none;
@@ -257,24 +313,32 @@ header {
     padding-right: 30px;
     padding-top: 3px;
 }
+
 .footer-link-list-item {
     line-height: normal;
     text-underline-position: under;
     font-size: 18px;
 }
+
 .social-list {
     display: flex;
     gap: 48px;
     list-style: none;
 }
+
 .social-icon {
     width: auto;
     height: 48px;
 }
+
 .text-link {
     font-size: 18px;
     font-weight: 400;
     line-height: 100%;
     text-align: center;
     color: black;
+}
+
+.footer-link-list-item-active {
+    text-decoration: none;
 }
