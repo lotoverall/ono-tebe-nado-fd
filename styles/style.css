@@ -112,9 +112,8 @@ header {
 }
 
 .description {
-    /*я не могу поменять position на другую, потому что в таком случае
-    у меня все ломается и весь cover съезжает*/
-    position: absolute;
+    /*поменяла. но весь cover съехал*/
+    position: relative;
     bottom: 50px;
     z-index: 1;
     display: flex;
